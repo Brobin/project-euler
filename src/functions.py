@@ -3,6 +3,8 @@ Useful mathmatical functions that may be used
 for multiple solutions.
 '''
 
+import math
+
 def is_prime(n):
 	n = abs(n)
 	for x in range(3, int(n**0.5)+1, 2):
@@ -17,7 +19,7 @@ def triangular_number(n):
 	'''
 	return n*(n+1)/2
 
-def is_trangular(number):
+def is_triangular(number):
 	'''
 	Determines whether the given number is
 	triangular.
