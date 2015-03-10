@@ -34,6 +34,7 @@ def sum_of_abundants():
 	result = []
 	for x in nums:
 		for y in nums:
+			z = x+y
 			result.append(x+y)
 	return list(set(result))
 
