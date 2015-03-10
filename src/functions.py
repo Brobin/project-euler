@@ -119,7 +119,4 @@ def triangle_max_path(t):
 			t[depth-1][x] += max(t[depth][x], t[depth][x+1])
 		t.pop()
 		depth = len(t) - 1
-	print(t)
 	return t[0][0]
-
-print(triangle_max_path([[1],[4,5],[7,8,9]]))
