@@ -13,15 +13,16 @@ What is the sum of the numbers on the diagonals in a
 1001 by 1001 spiral formed in the same way?
 '''
 
+
 def spiral_sum(n):
-	total = 1
-	number = 1
-	z = 1
-	while z < n:
-		for x in range(4):
-			number += z+1
-			total += number
-		z += 2
-	return total
+    total = 1
+    number = 1
+    z = 1
+    while z < n:
+        for x in range(4):
+            number += z + 1
+            total += number
+        z += 2
+    return total
 
 print(spiral_sum(1001))

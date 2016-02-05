@@ -22,29 +22,33 @@ written as the sum of two abundant numbers.
 
 from functions import divisors
 
+
 def abundant_numbers():
-	result = []
-	for x in range(1,28123):
-		if sum(divisors(x)) > x:
-			result.append(x)
-	return result
+    result = []
+    for x in range(1, 28123):
+        if sum(divisors(x)) > x:
+            result.append(x)
+    return result
+
 
 def sum_of_abundants():
-	nums = abundant_numbers()
-	result = []
-	for x in nums:
-		for y in nums:
-			z = x+y
-			result.append(x+y)
-	return list(set(result))
+    nums = abundant_numbers()
+    result = []
+    for x in nums:
+        for y in nums:
+            z = x + y
+            result.append(x + y)
+    return list(set(result))
 
 # very brute force, but it works
+
+
 def not_abundant_sum():
-	sums = sum_of_abundants()
-	result = []
-	for x in range(1,28123):
-		if x not in sums:
-			result.append(x)
-	return sum(result)
+    sums = sum_of_abundants()
+    result = []
+    for x in range(1, 28123):
+        if x not in sums:
+            result.append(x)
+    return sum(result)
 
 print(not_abundant_sum())
